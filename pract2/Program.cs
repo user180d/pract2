@@ -15,7 +15,7 @@ class Program
     public string outputFile { get; set; }
     //= @"C:\Users\golub\source\lessons\multiplat\pract1\pract1\OUTPUT.txt";
 
-    static int entry(int steps, int shop)
+    static float entry(int steps, float shop)
     {
         
         if (shop == 0 || shop > steps)
@@ -28,16 +28,16 @@ class Program
             return solve(steps, shop);
     }
 
-    static int solve(int steps, int shop)
+    static float solve(int steps, float shop)
     {
-        if (shop == steps - 4)
+        if (steps == shop + 4)
         {
-            int s = (shop + 3) * (shop / 2);
+            float s = (shop + 3) * (shop / 2);
             return s;
         }
         else
         {
-            int s = solve(steps - 1, shop + 1) + solve(steps - 1, shop - 1);
+            float s = solve(steps - 1, shop + 1) + solve(steps - 1, shop - 1);
             return s;
         }
     }
@@ -50,8 +50,8 @@ class Program
 
             int k = int.Parse(input[1]);
 
-            int result = entry(k, n);
-
+            float result = entry(k, n);
+            Console.WriteLine(result);
             File.WriteAllText(outputFile, result.ToString());
         }
         catch (Exception e) 
