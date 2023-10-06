@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "pract2": {
+      "commandName": "Project",
+      "commandLineArgs": "-i \"C:\\Users\\golub\\source\\lessons\\multiplat\\pract2\\pract2\\INPUT.txt\" -o \"C:\\Users\\golub\\source\\lessons\\multiplat\\pract2\\pract2\\OUTPUT.txt\""
+    }
+  }
+}
