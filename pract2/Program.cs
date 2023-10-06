@@ -10,10 +10,10 @@ class Program
 
     [Option(ShortName = "i")]
     public string inputFile { get; set; }
-    //= @"C:\Users\golub\source\lessons\multiplat\pract1\pract1\INPUT.txt";
+
     [Option(ShortName = "o")]
     public string outputFile { get; set; }
-    //= @"C:\Users\golub\source\lessons\multiplat\pract1\pract1\OUTPUT.txt";
+    
 
     static float entry(int steps, float shop)
     {
