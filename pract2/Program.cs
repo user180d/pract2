@@ -20,20 +20,24 @@ class Program
         if (steps == shop)
         {
             answer = 1;
+            return;
         }
         else if (shop == steps - 1)
         {
             answer = 0;
+            return;
         }
         else if ((steps - shop) % 2 != 0)
         {
             answer = 0;
+            return;
         }
         else if (steps == shop + 4)
         {
             float n = shop, k = steps, a = 0;
             a += (n + 3) * (n / 2);
             answer = (int)a;
+            return;
         }
         else
         {
@@ -69,7 +73,7 @@ class Program
             int k = int.Parse(input[1]);
             if (n != 0 || n <= k)
             {                
-                entry(n, k);
+                entry(10, 10);
                 Console.WriteLine(answer);
                 File.WriteAllText(outputFile, answer.ToString());
             }
