@@ -71,7 +71,8 @@ class Program
             int n = int.Parse(input[0]);
 
             int k = int.Parse(input[1]);
-            if (n != 0 || n <= k)
+
+            if (n != 0 && n <= k && k<=37)
             {                
                 entry(10, 10);
                 Console.WriteLine(answer);
@@ -79,7 +80,7 @@ class Program
             }
             else
             {
-                Console.WriteLine("Distance to shop equal 0 or bigger than amount of steps");
+                Console.WriteLine("Distance to shop equal 0, bigger than amount of steps or some of paramets bigger than 37");
             }
            
         }
